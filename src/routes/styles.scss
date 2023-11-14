@@ -1,0 +1,44 @@
+@import 'static/styles/normalize';
+@import 'static/styles/font-face';
+
+:root {
+	--red: #f56060;
+	--green: #24b5ab;
+}
+
+html {
+	font-family: 'Montserrat';
+	color: #000000;
+}
+
+* {
+	position: relative;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+	color: #000000;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+}
+
+button {
+	appearance: none;
+	background: none;
+	border: none;
+	cursor: pointer;
+	padding: 0;
+}
+
+[contenteditable='true'] {
+	width: fit-content;
+}
