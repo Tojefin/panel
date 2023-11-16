@@ -8,15 +8,15 @@
 		password_confirm: '1234'
 	};
 
-	const login = request('/api/auth/login');
+	const register = request('/api/auth/register');
 
 	async function submit() {
 		if (form.password != form.password_confirm) {
 			throw new Error('Пароли не совпадают');
 		}
-		console.log('login');
+		console.log('register');
 
-		await login.send({
+		await register.send({
 			method: 'POST',
 			headers: {
 				'Content-type': 'application/json; charset=UTF-8'
@@ -24,8 +24,8 @@
 			body: JSON.stringify(form)
 		});
 
-		if (!$login.error) {
-			console.log($login.error);
+		if (!$register.error) {
+			console.log($register.error);
 			goto('/panel');
 		}
 	}
