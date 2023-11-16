@@ -6,7 +6,6 @@ const menu = [
   {
     category: 'Bot',
   }
-
 ]
 
 export default menu
