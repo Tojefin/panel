@@ -4,6 +4,12 @@
 	import { onMount } from 'svelte';
 
 	onMount(() => {
-    goto(`/panel/${menu[0].category.toLocaleLowerCase()}/${menu[0].pages[0].toLocaleLowerCase()}`)
+		if (menu[0].pages) {
+			goto(
+				`/panel/${menu[0].category.toLocaleLowerCase()}/${menu[0].pages[0].toLocaleLowerCase()}`
+			);
+		} else {
+			goto(`/panel/${menu[0].category.toLocaleLowerCase()}`);
+		}
 	});
 </script>

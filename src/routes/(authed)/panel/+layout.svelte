@@ -49,7 +49,7 @@
 	{#if loaded}
 		<aside>
 			{#each categoryLinks as { href, name }}
-				<a {href} class:active={name == activeCategory}>
+				<a {href} class:active={name == activeCategory} title={name}>
 					{name.split('')[0]}
 				</a>
 			{/each}
@@ -103,7 +103,7 @@
 			background: #000;
 			color: #fff;
 			font-size: 32px;
-			transition: all ease 0.25s;
+			transition: all ease 0.3s;
 
 			&.active {
 				background: #fff;
